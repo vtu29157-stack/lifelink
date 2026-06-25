@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* Softer gray background */
+    --foreground: 222.2 84% 4.9%;
+
+    --primary: 346.8 77.2% 49.8%;
+    --primary-foreground: 355.7 100% 97.3%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 346.8 77.2% 49.8%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-red-200 selection:text-red-900;
+    overflow-x: hidden;
+  }
+
+  /* Custom Professional Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f8fafc;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+    border: 2px solid #f8fafc;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-lg border-b border-white/40 shadow-sm supports-[backdrop-filter]:bg-white/60;
+  }
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-red-600 via-rose-500 to-orange-500 animate-gradient-x;
+  }
+}
+
+/* Custom Keyframe Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes gradient-x {
+  0%, 100% { background-size: 200% 200%; background-position: left center; }
+  50% { background-size: 200% 200%; background-position: right center; }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}

@@ -22,6 +22,9 @@ app.use('/api/donors', donorRoutes);
 app.use('/api/requests', requestRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.get('/', (req, res) => {
+  res.json({ status: 'API is running', message: 'Welcome to LifeLink API' });
+});
 
 app.use(errorHandler);
 

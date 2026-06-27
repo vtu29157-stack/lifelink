@@ -38,8 +38,8 @@ const Home = () => {
             </motion.div>
             
             <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-gray-900 leading-tight">
-              Donate Blood,<br />
-              <span className="text-gradient">Save a Life Today.</span>
+              LifeLink: <span className="text-gradient">Blood Donation</span><br />
+              Management System
             </motion.h1>
             
             <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed">

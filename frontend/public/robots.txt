@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lifelink-u54f.vercel.app/sitemap.xml

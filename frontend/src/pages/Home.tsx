@@ -101,6 +101,61 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+      {/* Stats Section */}
+      <section className="py-16 bg-red-600 relative z-20 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+              <div className="text-5xl font-extrabold mb-2">10,000+</div>
+              <div className="text-red-200 font-medium text-lg">Total Donors</div>
+            </motion.div>
+            <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.1 }}>
+              <div className="text-5xl font-extrabold mb-2">5,430</div>
+              <div className="text-red-200 font-medium text-lg">Blood Requests Fulfilled</div>
+            </motion.div>
+            <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.2 }}>
+              <div className="text-5xl font-extrabold mb-2">15,000+</div>
+              <div className="text-red-200 font-medium text-lg">Lives Saved</div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-white relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Donors & Recipients</h2>
+            <p className="text-lg text-gray-500">Real stories from our LifeLink community.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
+              <div className="flex text-yellow-400 mb-4">
+                {"★★★★★"}
+              </div>
+              <p className="text-gray-600 mb-6 italic">"When my father needed O- negative blood during surgery, LifeLink found a donor within 15 minutes. Truly a lifesaver."</p>
+              <div className="font-bold text-gray-900">- Sarah Jenkins</div>
+            </div>
+            
+            <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
+              <div className="flex text-yellow-400 mb-4">
+                {"★★★★★"}
+              </div>
+              <p className="text-gray-600 mb-6 italic">"The registration process is seamless. I get notified immediately on my phone if someone nearby needs my blood type."</p>
+              <div className="font-bold text-gray-900">- Michael T.</div>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
+              <div className="flex text-yellow-400 mb-4">
+                {"★★★★★"}
+              </div>
+              <p className="text-gray-600 mb-6 italic">"As a regular donor, this platform makes it incredibly easy to track requests and ensure my donations go where they are needed most."</p>
+              <div className="font-bold text-gray-900">- Emily R.</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

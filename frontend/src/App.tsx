@@ -32,8 +32,15 @@ function App() {
           </Routes>
         </main>
         
-        <footer className="bg-gray-900 text-gray-300 py-12 text-center mt-auto">
-          <p>© 2026 LifeLink - Blood Donation Management System. All rights reserved.</p>
+        <footer className="bg-gray-900 text-gray-300 py-8 mt-auto border-t border-gray-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-sm md:text-base">
+            <p className="mb-2">
+              <span className="font-semibold text-white">© 2026 LifeLink</span>
+            </p>
+            <p className="text-gray-400">
+              Designed & Developed by <span className="text-red-400 font-medium">ch krishnam naidu</span>
+            </p>
+          </div>
         </footer>
       </div>
     </Router>
